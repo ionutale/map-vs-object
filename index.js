@@ -34,12 +34,14 @@ function runObject() {
   } while (index < maxIterations);
   console.timeEnd(`object ${maxIterations}`);
 
-  const distantIndex = Math.round(0.9 * maxIterations);
+  // const distantIndex = Math.round(0.9 * maxIterations);
 
-  console.time(`object ${distantIndex} - access`);
-  console.log('found-value: ', myMap[distantIndex]);
-  console.timeEnd(`object ${distantIndex} - access`);
+  // console.time(`object ${distantIndex} - access`);
+  // console.log('found-value: ', myMap[distantIndex]);
+  // console.timeEnd(`object ${distantIndex} - access`);
 }
+
+
 
 function runMap() {
   const maxIterations = process.env.ITERATIONS || 100_000;
@@ -55,12 +57,14 @@ function runMap() {
   } while (index < maxIterations);
   console.timeEnd(`map ${maxIterations}`);
 
-  const distantIndex = Math.round(0.9 * maxIterations);
+  // const distantIndex = Math.round(0.9 * maxIterations);
 
-  console.time(`map ${distantIndex} - access`);
-  console.log('found-value: ', myMap.get(distantIndex));
-  console.timeEnd(`map ${distantIndex} - access`);
+  // console.time(`map ${distantIndex} - access`);
+  // console.log('found-value: ', myMap.get(distantIndex));
+  // console.timeEnd(`map ${distantIndex} - access`);
 }
+
+
 
 function runArray() {
   const maxIterations = process.env.ITERATIONS || 100_000;
@@ -76,9 +80,9 @@ function runArray() {
   } while (index < maxIterations);
   console.timeEnd(`array ${maxIterations}`);
 
-  const distantIndex = Math.round(0.9 * maxIterations);
+  // const distantIndex = Math.round(0.9 * maxIterations);
 
-  console.time(`array ${distantIndex} - access`);
-  console.log('found-value: ', myMap[distantIndex]);
-  console.timeEnd(`array ${distantIndex} - access`);
+  // console.time(`array ${distantIndex} - access`);
+  // console.log('found-value: ', myMap[distantIndex]);
+  // console.timeEnd(`array ${distantIndex} - access`);
 }
