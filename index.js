@@ -55,7 +55,7 @@ function runMap() {
     myMap.set(index, random);
     index++;
   } while (index < maxIterations);
-  console.timeEnd(`map ${maxIterations}`);
+  console.timeEnd(`map    ${maxIterations}`);
 
   // const distantIndex = Math.round(0.9 * maxIterations);
 
@@ -78,7 +78,7 @@ function runArray() {
     myMap[index] = random;
     index++;
   } while (index < maxIterations);
-  console.timeEnd(`array ${maxIterations}`);
+  console.timeEnd(`array  ${maxIterations}`);
 
   // const distantIndex = Math.round(0.9 * maxIterations);
 
