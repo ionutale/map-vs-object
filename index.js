@@ -45,7 +45,7 @@ function runObject() {
 
 function runMap() {
   const maxIterations = process.env.ITERATIONS || 100_000;
-  console.time(`map ${maxIterations}`);
+  console.time(`map___ ${maxIterations}`);
 
   let index = 0;
   const myMap = new Map();
@@ -55,7 +55,7 @@ function runMap() {
     myMap.set(index, random);
     index++;
   } while (index < maxIterations);
-  console.timeEnd(`map    ${maxIterations}`);
+  console.timeEnd(`map___ ${maxIterations}`);
 
   // const distantIndex = Math.round(0.9 * maxIterations);
 
@@ -68,7 +68,7 @@ function runMap() {
 
 function runArray() {
   const maxIterations = process.env.ITERATIONS || 100_000;
-  console.time(`array ${maxIterations}`);
+  console.time(`array_ ${maxIterations}`);
 
   let index = 0;
   const myMap = [];
@@ -78,7 +78,7 @@ function runArray() {
     myMap[index] = random;
     index++;
   } while (index < maxIterations);
-  console.timeEnd(`array  ${maxIterations}`);
+  console.timeEnd(`array_ ${maxIterations}`);
 
   // const distantIndex = Math.round(0.9 * maxIterations);
 

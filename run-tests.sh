@@ -13,8 +13,8 @@ items=(
   1000000000)
 
 rams=(128 256 512 1024 2048 4096 8192 16384)
-cpus=(0.5 1 2 4)
-types=(object array map)
+cpus=('0.5' '1.0' '2.0' '3.0' '4.0')
+types=("object" "array_" "map___")
 
 log_text=""
 
@@ -27,9 +27,9 @@ do
     do
       for type in "${types[@]}"
       do
-          log_text="$type type, $cpu cpu, $ram ram, $i iterations" 
+          log_text="$cpu cpu, $ram ram, $i iterations, $type type" 
           log_text="$log_text, $(docker run -it --rm \
-          -e TYPE=object \
+          -e TYPE=$(echo $type | tr -d '_') \
           -e ITERATIONS=$i \
           -m ${ram}m \
           --memory-swap ${ram}m \
@@ -37,7 +37,7 @@ do
           --name map-vs-object-vs-array-$i \
           map-vs-object-vs-array)"
 
-          echo $log_text
+          echo $log_text | column -t
           echo $log_text >> results.txt
       done
     done
